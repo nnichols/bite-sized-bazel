@@ -1,0 +1,27 @@
+# Bite-Sized Bazel
+
+This repository is an educational, narrative guide to creating a new Bazel project from scratch.
+The wiki for this repository contains a step-by-step guide that iteratively builds up a Bazel project in bite-sized pieces.
+We'll cover the basics of Bazel, how to set up your workspace, how to define and build your own targets, and more.
+
+## Disclaimers
+
+This is intended as an educational resource, not a production-ready project.
+For the sake of narrative consistency, we'll be pinning versions of most dependencies and Bazel itself.
+Over time, these will naturally fall out of date- please refer to the official documentation for the most current information.
+
+Furthermore, this guide is not exhaustive.
+Bazel is a powerful tool that can be used in many different ways, and enables developers to build their own tooling, workflows, and more.
+This guide is intended to help understand the fundamentals of Bazel, not to prescribe a particular toolchain, workflow, or process.
+
+### Pinned Versions
+
+Explicitly pinned tools will be documented below:
+
+- **Bazel**: 8.3.1
+
+## Licensing
+
+This repository, the documentation, and all included code is licensed under the MIT License.
+That said, it was primarily created for educational purposes, so please use accordingly.
+See the [LICENSE](LICENSE) file for more details.
