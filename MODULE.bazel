@@ -1,0 +1,6 @@
+"""
+The project's root module.
+This declares what dependencies the entire project relies upon, and binds them to their version.
+"""
+
+module(name = "bite-sized-bazel", version = "1.0")

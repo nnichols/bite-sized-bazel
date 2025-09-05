@@ -1,0 +1,6 @@
+# Ignore Bazel output directories
+
+bazel-*
+bazel-bin
+bazel-out
+bazel-testlogs
