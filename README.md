@@ -20,6 +20,14 @@ Explicitly pinned tools will be documented below:
 
 - **Bazel**: 8.3.1
 
+## Lessons
+
+The lessons can be found in the [wiki of this repository.](https://github.com/nnichols/bite-sized-bazel/wiki)
+They progressively build up the repository from an initial, empty commit to the current state.
+
+- [Lesson 1: Installing Bazel](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-1:-Installing-Bazel)
+  - Installs Bazel to your machine and sets up the repository as a Bazel project
+
 ## Licensing
 
 This repository, the documentation, and all included code is licensed under the MIT License.
