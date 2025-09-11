@@ -20,6 +20,10 @@ Explicitly pinned tools will be documented below:
 
 - **Bazel**: 8.3.1
 
+### Unpinned Tools
+
+- **graphviz**: Used to visualize dependency graphs as images.
+
 ## Lessons
 
 The lessons can be found in the [wiki of this repository.](https://github.com/nnichols/bite-sized-bazel/wiki)
