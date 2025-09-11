@@ -1,0 +1,6 @@
+digraph mygraph {
+  node [shape=box];
+  "//collector:demo"
+  "//collector:demo" -> "//hello_world:demo\n//hello_world/inner_world:documentation"
+  "//hello_world:demo\n//hello_world/inner_world:documentation"
+}
