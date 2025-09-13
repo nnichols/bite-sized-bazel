@@ -3,4 +3,21 @@ The project's root module.
 This declares what dependencies the entire project relies upon, and binds them to their version.
 """
 
-module(name = "bite-sized-bazel", version = "1.0")
+module(
+    name = "bite-sized-bazel",
+    version = "1.0",
+)
+
+# Dependencies
+
+## Rules used to compile Java code and produce executables/JARs
+bazel_dep(
+    name = "rules_java",
+    version = "8.12.0",
+)
+
+## Rules to run Python code as a binary
+bazel_dep(
+    name = "rules_python",
+    version = "1.6.1",
+)
