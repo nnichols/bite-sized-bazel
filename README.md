@@ -18,11 +18,11 @@ This guide is intended to help understand the fundamentals of Bazel, not to pres
 
 Explicitly pinned tools will be documented below:
 
-- **Bazel**: 8.3.1
+- [**Bazel**](https://bazel.build/): 8.3.1
 
 ### Unpinned Tools
 
-- **graphviz**: Used to visualize dependency graphs as images.
+- [**Graphviz**](https://graphviz.org/): Used to visualize dependency graphs as images.
 
 ## Lessons
 
