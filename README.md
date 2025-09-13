@@ -31,6 +31,8 @@ They progressively build up the repository from an initial, empty commit to the 
 
 - [Lesson 1: Installing Bazel](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-1:-Installing-Bazel)
   - Installs Bazel to your machine and sets up the repository as a Bazel project
+- [Lesson 2: Creating Packages](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-2:-Creating-Packages)
+  - Creates a few basic packages, links them together, and explores the dependency graph
 
 ## Licensing
 
