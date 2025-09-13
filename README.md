@@ -38,6 +38,8 @@ They progressively build up the repository from an initial, empty commit to the 
   - Installs Bazel to your machine and sets up the repository as a Bazel project
 - [Lesson 2: Creating Packages](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-2:-Creating-Packages)
   - Creates a few basic packages, links them together, and explores the dependency graph
+- [Lesson 3: Building Artifacts](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-3:-Building-Artifacts)
+  - Installs Java and Python, and builds executable binaries with both languages.
 
 ## Licensing
 
