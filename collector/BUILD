@@ -9,4 +9,7 @@ filegroup(
         "//hello_world:demo",
         "//hello_world/inner_world:documentation",
     ],
+    visibility = [
+        "//visibility:private",
+    ],
 )

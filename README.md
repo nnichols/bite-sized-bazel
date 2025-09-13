@@ -19,10 +19,15 @@ This guide is intended to help understand the fundamentals of Bazel, not to pres
 Explicitly pinned tools will be documented below:
 
 - [**Bazel**](https://bazel.build/): 8.3.1
+- [**rules_java**](https://github.com/bazelbuild/rules_java/tree/8.12.0): 8.12.0
+- [**OpenJDK**](https://openjdk.org/projects/jdk/21/): 21.0.8
+- [**Python**](https://www.python.org/downloads/release/python-3137/): 3.13.7
 
 ### Unpinned Tools
 
 - [**Graphviz**](https://graphviz.org/): Used to visualize dependency graphs as images.
+- [**jEnv**](https://github.com/jenv/jenv): Java version manager.
+- [**pyenv**](https://github.com/pyenv/pyenv): Python version manager.
 
 ## Lessons
 
