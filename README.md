@@ -20,6 +20,7 @@ Explicitly pinned tools will be documented below:
 
 - [**Bazel**](https://bazel.build/): 8.3.1
 - [**rules_java**](https://github.com/bazelbuild/rules_java/tree/8.12.0): 8.12.0
+- [**rules_python**](https://github.com/bazel-contrib/rules_python): 1.6.1
 - [**OpenJDK**](https://openjdk.org/projects/jdk/21/): 21.0.8
 - [**Python**](https://www.python.org/downloads/release/python-3137/): 3.13.7
 
