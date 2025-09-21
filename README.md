@@ -22,7 +22,10 @@ Explicitly pinned tools will be documented below:
 - [**rules_java**](https://github.com/bazelbuild/rules_java/tree/8.12.0): 8.12.0
 - [**rules_python**](https://github.com/bazel-contrib/rules_python): 1.6.1
 - [**OpenJDK**](https://openjdk.org/projects/jdk/21/): 21.0.8
-- [**Python**](https://www.python.org/downloads/release/python-3137/): 3.13.7
+- [**Python**](https://www.python.org/downloads/release/python-3137/): 3.11.9
+- [**rules_jvm_external**](https://github.com/bazel-contrib/rules_jvm_external?tab=readme-ov-file):  6.8
+- [**Gson**](https://github.com/google/gson): 2.13.2
+- [**json-lineage**](https://github.com/Salaah01/json-lineage): 0.2.2
 
 ### Unpinned Tools
 

@@ -1,5 +1,10 @@
+import libraries.stdlib.Strings;
+
 public class Hello {
     public static void main(String args[]) {
-        System.out.println("Hello from Java!");
+        String concatedArgs = Strings.concatArray(args);
+        String basis = "Hello, ";
+
+        System.out.println(basis.concat(concatedArgs));
     }
 }
