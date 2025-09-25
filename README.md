@@ -44,6 +44,8 @@ They progressively build up the repository from an initial, empty commit to the 
   - Creates a few basic packages, links them together, and explores the dependency graph
 - [Lesson 3: Building Artifacts](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-3:-Building-Artifacts)
   - Installs Java and Python, and builds executable binaries with both languages.
+- [Lesson 4: Dependency Management](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-4:-Dependency-Management)
+  - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and Pypi  
 
 ## Licensing
 
