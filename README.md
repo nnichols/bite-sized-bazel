@@ -11,7 +11,7 @@ For the sake of narrative consistency, we'll be pinning versions of most depende
 Over time, these will naturally fall out of date- please refer to the official documentation for the most current information.
 
 Furthermore, this guide is not exhaustive.
-Bazel is a powerful tool that can be used in many different ways, and enables developers to build their own tooling, workflows, and more.
+Bazel is a powerful tool that can be used in many different ways and enables developers to build their own tooling, workflows, and more.
 This guide is intended to help understand the fundamentals of Bazel, not to prescribe a particular toolchain, workflow, or process.
 
 ### Pinned Versions
@@ -39,13 +39,13 @@ The lessons can be found in the [wiki of this repository.](https://github.com/nn
 They progressively build up the repository from an initial, empty commit to the current state.
 
 - [Lesson 1: Installing Bazel](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-1:-Installing-Bazel)
-  - Installs Bazel to your machine and sets up the repository as a Bazel project
+  - Installs Bazel on your machine and sets up the repository as a Bazel project.
 - [Lesson 2: Creating Packages](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-2:-Creating-Packages)
-  - Creates a few basic packages, links them together, and explores the dependency graph
+  - Creates a few basic packages, links them together, and explores the dependency graph.
 - [Lesson 3: Building Artifacts](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-3:-Building-Artifacts)
   - Installs Java and Python, and builds executable binaries with both languages.
 - [Lesson 4: Dependency Management](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-4:-Dependency-Management)
-  - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and Pypi  
+  - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and PyPI.  
 
 ## Licensing
 
