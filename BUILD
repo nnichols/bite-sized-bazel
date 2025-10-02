@@ -20,5 +20,3 @@ compile_pip_requirements(
     src = "requirements.in",
     requirements_txt = "requirements_lock.txt",
 )
-
-# A target designating the Python lockfile

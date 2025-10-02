@@ -34,6 +34,7 @@ maven.install(
     # The artifacts we've installed from Maven central
     artifacts = [
         "com.google.code.gson:gson:2.13.2", # JSON Encoding
+        "junit:junit:4.13.2", # Java Testing
     ],
     # Installs the source JAR alongside the artifact JAR
     fetch_sources = True,

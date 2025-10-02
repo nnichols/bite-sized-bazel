@@ -26,6 +26,7 @@ Explicitly pinned tools will be documented below:
 - [**rules_jvm_external**](https://github.com/bazel-contrib/rules_jvm_external?tab=readme-ov-file):  6.8
 - [**Gson**](https://github.com/google/gson): 2.13.2
 - [**json-lineage**](https://github.com/Salaah01/json-lineage): 0.2.2
+- [**jUnit**](https://junit.org/junit4/): 4.13.2
 
 ### Unpinned Tools
 
@@ -45,7 +46,9 @@ They progressively build up the repository from an initial, empty commit to the 
 - [Lesson 3: Building Artifacts](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-3:-Building-Artifacts)
   - Installs Java and Python, and builds executable binaries with both languages.
 - [Lesson 4: Dependency Management](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-4:-Dependency-Management)
-  - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and PyPI.  
+  - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and PyPI.
+- Lesson 5: Executing Tests
+  - Writes and runs unit tests for both Java and Python code.
 
 ## Licensing
 
