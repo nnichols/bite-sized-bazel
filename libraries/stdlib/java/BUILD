@@ -16,6 +16,7 @@ java_library(
         ":strings",
         "@maven//:junit_junit"
     ],
+    testonly = True,
     srcs = ["StringsTest.java"],
 )
 
