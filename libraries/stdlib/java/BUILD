@@ -2,12 +2,14 @@
 Builds consumable libraries of static methods.
 """
 load("@rules_java//java:defs.bzl", "java_library", "java_test")
+load("//:tags.bzl", "java_tag")
 
 package(default_visibility = ["//visibility:public"])
 
 java_library(
     name = "strings",
-    srcs = ["Strings.java"]
+    srcs = ["Strings.java"],
+    tags = [java_tag],
 )
 
 java_library(
@@ -18,6 +20,7 @@ java_library(
     ],
     testonly = True,
     srcs = ["StringsTest.java"],
+    tags = [java_tag],
 )
 
 java_test(
@@ -28,5 +31,11 @@ java_test(
         ":string_test_class",
         "@maven//:junit_junit",
     ],
-    test_class = "libraries.stdlib.StringsTest"
+    test_class = "libraries.stdlib.StringsTest",
+    tags = [java_tag],
+)
+
+test_suite(
+    name = "small_tests",
+    tags = ["small"],
 )
