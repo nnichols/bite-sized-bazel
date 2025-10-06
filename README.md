@@ -4,6 +4,22 @@ This repository is an educational, narrative guide to creating a new Bazel proje
 The wiki for this repository contains a step-by-step guide that iteratively builds up a Bazel project in bite-sized pieces.
 We'll cover the basics of Bazel, how to set up your workspace, how to define and build your own targets, and more.
 
+## Lessons
+
+The lessons can be found in the [wiki of this repository.](https://github.com/nnichols/bite-sized-bazel/wiki)
+They progressively build up the repository from an initial, empty commit to the current state.
+
+- [Lesson 1: Installing Bazel](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-1:-Installing-Bazel)
+  - Installs Bazel on your machine and sets up the repository as a Bazel project.
+- [Lesson 2: Creating Packages](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-2:-Creating-Packages)
+  - Creates a few basic packages, links them together, and explores the dependency graph.
+- [Lesson 3: Building Artifacts](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-3:-Building-Artifacts)
+  - Installs Java and Python, and builds executable binaries with both languages.
+- [Lesson 4: Dependency Management](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-4:-Dependency-Management)
+  - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and PyPI.
+- [Lesson 5: Executing Tests](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-5:-Executing-Tests)
+  - Writes and runs unit tests for both Java and Python code.
+
 ## Disclaimers
 
 This is intended as an educational resource, not a production-ready project.
@@ -34,21 +50,9 @@ Explicitly pinned tools will be documented below:
 - [**jEnv**](https://github.com/jenv/jenv): Java version manager.
 - [**pyenv**](https://github.com/pyenv/pyenv): Python version manager.
 
-## Lessons
+## Additional Resources
 
-The lessons can be found in the [wiki of this repository.](https://github.com/nnichols/bite-sized-bazel/wiki)
-They progressively build up the repository from an initial, empty commit to the current state.
-
-- [Lesson 1: Installing Bazel](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-1:-Installing-Bazel)
-  - Installs Bazel on your machine and sets up the repository as a Bazel project.
-- [Lesson 2: Creating Packages](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-2:-Creating-Packages)
-  - Creates a few basic packages, links them together, and explores the dependency graph.
-- [Lesson 3: Building Artifacts](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-3:-Building-Artifacts)
-  - Installs Java and Python, and builds executable binaries with both languages.
-- [Lesson 4: Dependency Management](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-4:-Dependency-Management)
-  - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and PyPI. 
-- [Lesson 5: Executing Tests](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-5:-Executing-Tests)
-  - Writes and runs unit tests for both Java and Python code.
+- [Glossary](https://github.com/nnichols/bite-sized-bazel/wiki/Glossary)
 
 ## Licensing
 
