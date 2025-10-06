@@ -19,6 +19,8 @@ They progressively build up the repository from an initial, empty commit to the 
   - Develops internally usable Java and Python libraries, and downloads external artifacts from Maven Central and PyPI.
 - [Lesson 5: Executing Tests](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-5:-Executing-Tests)
   - Writes and runs unit tests for both Java and Python code.
+- Lesson 6: General Rules
+  - Uses Bazel's built-in rules to add convenience targets to the project.
 
 ## Disclaimers
 
