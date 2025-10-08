@@ -10,3 +10,17 @@ filegroup(
         ["*.md"]
     ),
 )
+
+alias(
+    name = "docs",
+    actual = ":documentation"
+)
+
+genrule(
+    name = "concat_docs",
+    srcs = [
+        ":docs",
+    ],
+    outs = ["concatenated.txt"],
+    cmd = "cat $(locations :docs) > $@",
+)
