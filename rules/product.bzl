@@ -2,7 +2,7 @@
 Generates the product of arguments of dependencies.
 """
 
-NumberInfo = provider(doc = "", fields = ["number"])
+NumberInfo = provider(doc = "Stores the value for dependents", fields = ["number"])
 
 def _product_impl(ctx):
     result = ctx.attr.number
