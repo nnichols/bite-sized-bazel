@@ -21,7 +21,7 @@ They progressively build up the repository from an initial, empty commit to the 
   - Writes and runs unit tests for both Java and Python code.
 - [Lesson 6: General Rules](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-6:-General-Rules)
   - Explores the built-in general rules provided by Bazel.
-- Lesson 7: Authoring Rules
+- [Lesson 7: Authoring Rules](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-7:-Authoring-Rules)
   - Extends Bazel by writing custom rules in Starlark.
 
 ## Disclaimers
