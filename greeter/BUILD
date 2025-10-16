@@ -5,6 +5,8 @@ Greet people in multiple languages!
 load("@rules_java//java:defs.bzl", "java_binary")
 load("@rules_python//python:py_binary.bzl", "py_binary")
 load("//:tags.bzl", "java_tag", "python_tag")
+load("//rules:greeter.bzl", "greeter")
+load("//rules:json_greeter.bzl", "json_greeter")
 
 py_binary(
     name = "python",
@@ -68,4 +70,14 @@ genquery(
     expression = "deps(//greeter:python_json)",
     scope = [":python_json"],
     tags = [python_tag],
+)
+
+greeter(
+    name = "bazel",
+    username = "Nick"
+)
+
+json_greeter(
+    name = "bazel_json",
+    username = "Nick"
 )
