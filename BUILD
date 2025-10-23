@@ -1,6 +1,7 @@
 """
 Top-level repository files Bazel needs to access
 """
+
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
 
 # The file where rules_jvm_external stores how transitive dependencies were resolved

@@ -1,6 +1,7 @@
 """
 Builds consumable libraries of static methods.
 """
+
 load("@rules_java//java:defs.bzl", "java_library", "java_test")
 load("//:tags.bzl", "java_tag")
 
@@ -14,25 +15,25 @@ java_library(
 
 java_library(
     name = "string_test_class",
-    deps = [
-        ":strings",
-        "@maven//:junit_junit"
-    ],
     testonly = True,
     srcs = ["StringsTest.java"],
     tags = [java_tag],
+    deps = [
+        ":strings",
+        "@maven//:junit_junit",
+    ],
 )
 
 java_test(
     name = "strings_test",
     size = "small",
+    tags = [java_tag],
+    test_class = "libraries.stdlib.StringsTest",
     runtime_deps = [
-        ":strings",
         ":string_test_class",
+        ":strings",
         "@maven//:junit_junit",
     ],
-    test_class = "libraries.stdlib.StringsTest",
-    tags = [java_tag],
 )
 
 test_suite(
