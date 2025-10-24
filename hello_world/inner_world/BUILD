@@ -7,13 +7,13 @@ package(default_visibility = ["//visibility:public"])
 filegroup(
     name = "documentation",
     srcs = glob(
-        ["*.md"]
+        ["*.md"],
     ),
 )
 
 alias(
     name = "docs",
-    actual = ":documentation"
+    actual = ":documentation",
 )
 
 genrule(

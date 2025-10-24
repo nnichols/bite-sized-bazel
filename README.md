@@ -23,6 +23,8 @@ They progressively build up the repository from an initial, empty commit to the 
   - Explores the built-in general rules provided by Bazel.
 - [Lesson 7: Authoring Rules](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-7:-Authoring-Rules)
   - Extends Bazel by writing custom rules in Starlark.
+- Lesson 8: Build Tools
+  - Introduces `buildifier` and `buildozer` for the programmatic manipulation of BUILD and .bzl files.
 
 ## Disclaimers
 
@@ -47,9 +49,12 @@ Explicitly pinned tools will be documented below:
 - [**Gson**](https://github.com/google/gson): 2.13.2
 - [**json-lineage**](https://github.com/Salaah01/json-lineage): 0.2.2
 - [**jUnit**](https://junit.org/junit4/): 4.13.2
+- [**buildifier**](https://github.com/bazelbuild/buildtools/blob/main/buildifier/README.md): 8.2.1
+- [**buildozer**](https://github.com/bazelbuild/buildtools/blob/main/buildozer/README.md): 8.2.1
 
 ### Unpinned Tools
 
+- [**bazelisk**](https://github.com/bazelbuild/bazelisk): Used to manage Bazel versions
 - [**Graphviz**](https://graphviz.org/): Used to visualize dependency graphs as images.
 - [**jEnv**](https://github.com/jenv/jenv): Java version manager.
 - [**pyenv**](https://github.com/pyenv/pyenv): Python version manager.
@@ -57,6 +62,7 @@ Explicitly pinned tools will be documented below:
 ## Additional Resources
 
 - [Glossary](https://github.com/nnichols/bite-sized-bazel/wiki/Glossary)
+- [Further Reading Index](https://github.com/nnichols/bite-sized-bazel/wiki/Further-Reading)
 
 ## Licensing
 

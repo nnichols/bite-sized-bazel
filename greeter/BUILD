@@ -13,11 +13,11 @@ py_binary(
     srcs = [
         "hello.py",
     ],
+    main = "hello.py",
+    tags = [python_tag],
     deps = [
         "//libraries/stdlib/python:strings",
     ],
-    main = "hello.py",
-    tags = [python_tag],
 )
 
 py_binary(
@@ -25,12 +25,12 @@ py_binary(
     srcs = [
         "hellojson.py",
     ],
-    deps = [
-        "//libraries/stdlib/python:strings",
-        "@pypi//json_lineage:pkg"
-    ],
     main = "hellojson.py",
     tags = [python_tag],
+    deps = [
+        "//libraries/stdlib/python:strings",
+        "@pypi//json_lineage:pkg",
+    ],
 )
 
 java_binary(
@@ -38,11 +38,11 @@ java_binary(
     srcs = [
         "Hello.java",
     ],
+    main_class = "Hello",
+    tags = [java_tag],
     deps = [
         "//libraries/stdlib/java:strings",
     ],
-    main_class = "Hello",
-    tags = [java_tag],
 )
 
 java_binary(
@@ -50,12 +50,12 @@ java_binary(
     srcs = [
         "HelloJson.java",
     ],
-    deps = [
-        "//libraries/stdlib/java:strings",
-         "@maven//:com_google_code_gson_gson",
-    ],
     main_class = "HelloJson",
     tags = [java_tag],
+    deps = [
+        "//libraries/stdlib/java:strings",
+        "@maven//:com_google_code_gson_gson",
+    ],
 )
 
 genquery(
@@ -74,10 +74,10 @@ genquery(
 
 greeter(
     name = "bazel",
-    username = "Nick"
+    username = "Nick",
 )
 
 json_greeter(
     name = "bazel_json",
-    username = "Nick"
+    username = "Nick",
 )

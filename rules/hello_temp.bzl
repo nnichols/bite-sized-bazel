@@ -9,7 +9,6 @@ def _hello_temp_impl(ctx):
         content = "Hello\n",
     )
 
-
 hello_temp = rule(
     implementation = _hello_temp_impl,
 )
