@@ -23,7 +23,7 @@ They progressively build up the repository from an initial, empty commit to the 
   - Explores the built-in general rules provided by Bazel.
 - [Lesson 7: Authoring Rules](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-7:-Authoring-Rules)
   - Extends Bazel by writing custom rules in Starlark.
-- Lesson 8: Build Tools
+- [Lesson 8: Build Tools](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-8:-Build-Tools)
   - Introduces `buildifier` and `buildozer` for the programmatic manipulation of BUILD and .bzl files.
 
 ## Disclaimers
