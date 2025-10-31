@@ -25,6 +25,8 @@ They progressively build up the repository from an initial, empty commit to the 
   - Extends Bazel by writing custom rules in Starlark.
 - [Lesson 8: Build Tools](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-8:-Build-Tools)
   - Introduces `buildifier` and `buildozer` for the programmatic manipulation of BUILD and .bzl files.
+- Lesson 9: Symbolic Macros
+  - Extends Bazel by creating a symbolic macro which generates multiple targets at once
 
 ## Disclaimers
 

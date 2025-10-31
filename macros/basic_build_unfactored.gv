@@ -1,0 +1,10 @@
+digraph mygraph {
+  node [shape=box];
+  "//greeter:java"
+  "//greeter:python"
+  "//collector:demo"
+  "//collector:demo" -> "//hello_world:demo"
+  "//collector:demo" -> "//hello_world/inner_world:documentation"
+  "//hello_world:demo"
+  "//hello_world/inner_world:documentation"
+}
