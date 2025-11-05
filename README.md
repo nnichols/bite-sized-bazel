@@ -26,7 +26,9 @@ They progressively build up the repository from an initial, empty commit to the 
 - [Lesson 8: Build Tools](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-8:-Build-Tools)
   - Introduces `buildifier` and `buildozer` for the programmatic manipulation of BUILD and .bzl files.
 - [Lesson 9: Symbolic Macros](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-9:-Symbolic-Macros)
-  - Extends Bazel by creating a symbolic macro which generates multiple targets at once
+  - Extends Bazel by creating a symbolic macro which generates multiple targets at once.
+- Lesson 10: Toolchains
+  - Extends Bazel with rules which have system-specific dependencies.
 
 ## Disclaimers
 
@@ -53,6 +55,8 @@ Explicitly pinned tools will be documented below:
 - [**jUnit**](https://junit.org/junit4/): 4.13.2
 - [**buildifier**](https://github.com/bazelbuild/buildtools/blob/main/buildifier/README.md): 8.2.1
 - [**buildozer**](https://github.com/bazelbuild/buildtools/blob/main/buildozer/README.md): 8.2.1
+- [**babashka**](https://github.com/babashka/babashka): 1.12.209
+- [**platforms**](https://github.com/bazelbuild/platforms): 1.0.0
 
 ### Unpinned Tools
 

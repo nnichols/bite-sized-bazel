@@ -16,3 +16,9 @@ compile_pip_requirements(
     src = "requirements.in",
     requirements_txt = "requirements_lock.txt",
 )
+
+alias(
+    name = "babashka_toolchain",
+    actual = "//toolchains/babashka:babashka_toolchain",
+    visibility = ["//visibility:public"],
+)

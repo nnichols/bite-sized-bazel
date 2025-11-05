@@ -4,9 +4,10 @@ Greet people in multiple languages!
 
 load("@rules_java//java:defs.bzl", "java_binary")
 load("@rules_python//python:py_binary.bzl", "py_binary")
-load("//:tags.bzl", "java_tag", "python_tag")
+load("//:tags.bzl", "babashka_tag", "java_tag", "python_tag")
 load("//rules:greeter.bzl", "greeter")
 load("//rules:json_greeter.bzl", "json_greeter")
+load("//toolchains/babashka:bb_binary.bzl", "bb_binary")
 
 py_binary(
     name = "python",
@@ -80,4 +81,16 @@ greeter(
 json_greeter(
     name = "bazel_json",
     username = "Nick",
+)
+
+bb_binary(
+    name = "babashka",
+    src = ":hello.clj",
+    tags = [babashka_tag],
+)
+
+bb_binary(
+    name = "babashka_json",
+    src = ":hello_json.clj",
+    tags = [babashka_tag],
 )
