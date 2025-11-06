@@ -4,3 +4,8 @@ bazel-*
 bazel-bin
 bazel-out
 bazel-testlogs
+
+## Ignore Language-Specific LSPs/Caches
+
+.lsp
+.clj-kondo
