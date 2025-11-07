@@ -27,7 +27,7 @@ They progressively build up the repository from an initial, empty commit to the 
   - Introduces `buildifier` and `buildozer` for the programmatic manipulation of BUILD and .bzl files.
 - [Lesson 9: Symbolic Macros](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-9:-Symbolic-Macros)
   - Extends Bazel by creating a symbolic macro which generates multiple targets at once.
-- Lesson 10: Toolchains
+- [Lesson 10: Toolchains](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-10:-Toolchains)
   - Extends Bazel with rules which have system-specific dependencies.
 
 ## Disclaimers

@@ -2,7 +2,6 @@
 Defines the bb_genrule rule, which is a babashka-powered analogue to Bazel's genrule
 """
 
-# babashka.bzl
 def _bb_genrule_impl(ctx):
     toolchain = ctx.toolchains["//:babashka_toolchain"]
     ctx.actions.run(

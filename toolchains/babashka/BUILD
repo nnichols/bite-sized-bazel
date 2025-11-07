@@ -30,6 +30,7 @@ bb_binary(
 bb_test(
     name = "example_test",
     src = ":example_test.clj",
+    size = "small",
 )
 
 toolchain_type(
