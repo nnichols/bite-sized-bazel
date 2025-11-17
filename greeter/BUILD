@@ -4,10 +4,12 @@ Greet people in multiple languages!
 
 load("@rules_java//java:defs.bzl", "java_binary")
 load("@rules_python//python:py_binary.bzl", "py_binary")
-load("//:tags.bzl", "babashka_tag", "java_tag", "python_tag")
+load("//:tags.bzl", "babashka_tag", "clojure_tag", "java_tag", "python_tag")
 load("//rules:greeter.bzl", "greeter")
 load("//rules:json_greeter.bzl", "json_greeter")
 load("//toolchains/babashka:bb_binary.bzl", "bb_binary")
+load("//toolchains/clojure:clojure_binary.bzl", "clojure_binary")
+load("//toolchains/clojure:clojure_library.bzl", "clojure_library")
 
 py_binary(
     name = "python",
@@ -93,4 +95,39 @@ bb_binary(
     name = "babashka_json",
     src = ":hello_json.clj",
     tags = [babashka_tag],
+)
+
+clojure_library(
+    name = "clojure_hello_source",
+    srcs = ["hello_clojure.clj"],
+    tags = [clojure_tag],
+)
+
+clojure_binary(
+    name = "clojure",
+    main = "greeter.hello-clojure",
+    tags = [clojure_tag],
+    deps = [
+        ":clojure_hello_source",
+        "//libraries/stdlib/clojure:strings",
+    ],
+)
+
+clojure_library(
+    name = "clojure_hello_json_source",
+    srcs = ["hello_clojure_json.clj"],
+    tags = [clojure_tag],
+    deps = [
+        "//libraries/stdlib/clojure:strings",
+        "@maven//:cheshire_cheshire",
+    ],
+)
+
+clojure_binary(
+    name = "clojure_json",
+    main = "greeter.hello-clojure-json",
+    tags = [clojure_tag],
+    deps = [
+        ":clojure_hello_json_source",
+    ],
 )

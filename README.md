@@ -29,6 +29,8 @@ They progressively build up the repository from an initial, empty commit to the 
   - Extends Bazel by creating a symbolic macro which generates multiple targets at once.
 - [Lesson 10: Toolchains](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-10:-Toolchains)
   - Extends Bazel with rules which have system-specific dependencies.
+- Lesson 11: Advanced Toolchains
+  - Extends Bazel with rules that require their own, language-specific source code
 
 ## Disclaimers
 
@@ -45,25 +47,50 @@ This guide is intended to help understand the fundamentals of Bazel, not to pres
 Explicitly pinned tools will be documented below:
 
 - [**Bazel**](https://bazel.build/): 8.3.1
+  - The build tool this repository describes
 - [**rules_java**](https://github.com/bazelbuild/rules_java/tree/8.12.0): 8.12.0
+  - A Bazel toolchain for the Java Programming Language
 - [**rules_python**](https://github.com/bazel-contrib/rules_python): 1.6.1
+  - A Bazel toolchain for the Python Programming Language
 - [**OpenJDK**](https://openjdk.org/projects/jdk/21/): 21.0.8
+  - An open-source Java Development Kit
 - [**Python**](https://www.python.org/downloads/release/python-3137/): 3.11.9
+  - The Python Programming Language
 - [**rules_jvm_external**](https://github.com/bazel-contrib/rules_jvm_external?tab=readme-ov-file):  6.8
+  - A Bazel toolchain for managing external Maven dependencies
 - [**Gson**](https://github.com/google/gson): 2.13.2
+  - A Java library for handling JSON
 - [**json-lineage**](https://github.com/Salaah01/json-lineage): 0.2.2
+  - A Python library for handling JSON
 - [**jUnit**](https://junit.org/junit4/): 4.13.2
+  - A Java testing library and framework
 - [**buildifier**](https://github.com/bazelbuild/buildtools/blob/main/buildifier/README.md): 8.2.1
+  - A command-line linter for Starlark
 - [**buildozer**](https://github.com/bazelbuild/buildtools/blob/main/buildozer/README.md): 8.2.1
+  - A command-line tool for manipulating Starlark
 - [**babashka**](https://github.com/babashka/babashka): 1.12.209
+  - A hosted port of the Clojure Programming language on GraalVM
 - [**platforms**](https://github.com/bazelbuild/platforms): 1.0.0
+  - A Bazel repository which defines system constraints
+- [**clojure**](https://github.com/clojure/clojure): 1.12.3
+  - The Clojure Programming Language
+- [**clojure.spec.alpha**](https://github.com/clojure/spec.alpha): 0.5.238
+  - A Clojure library for schema validation
+- [**clojure.core.specs.alpha**](https://github.com/clojure/core.specs.alpha): 0.4.74
+  - A Clojure library containing clojure.spec.alpha definitions for functionality in the core language
+- [**Cheshire**](https://github.com/dakrone/cheshire): 6.1.0
+  - A Clojure library for handling JSON
 
 ### Unpinned Tools
 
-- [**bazelisk**](https://github.com/bazelbuild/bazelisk): Used to manage Bazel versions
-- [**Graphviz**](https://graphviz.org/): Used to visualize dependency graphs as images.
-- [**jEnv**](https://github.com/jenv/jenv): Java version manager.
-- [**pyenv**](https://github.com/pyenv/pyenv): Python version manager.
+- [**bazelisk**](https://github.com/bazelbuild/bazelisk)
+  - Used to manage the running Bazel version
+- [**Graphviz**](https://graphviz.org/)
+  - Used to visualize dependency graphs as images.
+- [**jEnv**](https://github.com/jenv/jenv)
+  - Java version manager.
+- [**pyenv**](https://github.com/pyenv/pyenv)
+  - Python version manager.
 
 ## Additional Resources
 

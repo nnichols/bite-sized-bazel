@@ -22,3 +22,9 @@ alias(
     actual = "//toolchains/babashka:babashka_toolchain",
     visibility = ["//visibility:public"],
 )
+
+alias(
+    name = "clojure_toolchain",
+    actual = "//toolchains/clojure:clojure_toolchain",
+    visibility = ["//visibility:public"],
+)

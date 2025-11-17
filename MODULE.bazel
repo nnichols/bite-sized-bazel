@@ -31,6 +31,8 @@ maven.install(
     artifacts = [
         "com.google.code.gson:gson:2.13.2",  # JSON Encoding
         "junit:junit:4.13.2",  # Java Testing
+        "org.clojure:clojure:1.12.3",  # The Clojure Programming Language
+        "cheshire:cheshire:6.1.0",  # Clojure JSON Encoding
     ],
     # Installs the source JAR alongside the artifact JAR
     fetch_sources = True,
@@ -46,6 +48,7 @@ maven.install(
     repositories = [
         "https://repo1.maven.org/maven2",
         "https://maven-central.storage-download.googleapis.com/maven2/",
+        "https://repo.clojars.org",
     ],
 )
 
@@ -100,8 +103,54 @@ http_archive(
     url = "https://github.com/babashka/babashka/releases/download/v1.12.209/babashka-1.12.209-windows-amd64.zip",
 )
 
+jvm_import_external = use_repo_rule("@bazel_tools//tools/build_defs/repo:jvm.bzl", "jvm_import_external")
+
+jvm_import_external(
+    name = "clojure_core",
+    artifact_sha256 = "cb2a1a3db1c2cd76ef4fa4a545d5a65f10b1b48b7f7672f0a109f5476f057166",
+    artifact_urls =
+        [
+            "https://repo1.maven.org/maven2/org/clojure/clojure/1.12.3/clojure-1.12.3.jar",
+        ],
+    rule_name = "java_import",
+)
+
+# Required by the compiler
+jvm_import_external(
+    name = "clojure_spec_alpha",
+    artifact_sha256 = "94cd99b6ea639641f37af4860a643b6ed399ee5a8be5d717cff0b663c8d75077",
+    artifact_urls =
+        [
+            "https://repo1.maven.org/maven2/org/clojure/spec.alpha/0.5.238/spec.alpha-0.5.238.jar",
+        ],
+    rule_name = "java_import",
+)
+
+# Required by the compiler
+jvm_import_external(
+    name = "clojure_core_specs",
+    artifact_sha256 = "eb73ac08cf49ba840c88ba67beef11336ca554333d9408808d78946e0feb9ddb",
+    artifact_urls =
+        [
+            "https://repo1.maven.org/maven2/org/clojure/core.specs.alpha/0.4.74/core.specs.alpha-0.4.74.jar",
+        ],
+    rule_name = "java_import",
+)
+
+# Required by the custom library creation code
+jvm_import_external(
+    name = "clojure_tools_cli",
+    artifact_sha256 = "7f100dc125c744e8038524d286ec22a18bfed14c42e7e1b66500e8c3d432c151",
+    artifact_urls =
+        [
+            "https://repo1.maven.org/maven2/org/clojure/tools.cli/1.2.245/tools.cli-1.2.245.jar",
+        ],
+    rule_name = "java_import",
+)
+
 register_toolchains(
     "//toolchains/babashka:bb_osx_toolchain",
     "//toolchains/babashka:bb_linux_toolchain",
     "//toolchains/babashka:bb_windows_toolchain",
+    "//toolchains/clojure:clojure_jvm_toolchain",
 )

@@ -6,3 +6,4 @@ Stores definitions for common tags.
 java_tag = "java"
 python_tag = "python"
 babashka_tag = "babashka"
+clojure_tag = "clojure"
