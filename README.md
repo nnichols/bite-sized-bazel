@@ -29,7 +29,7 @@ They progressively build up the repository from an initial, empty commit to the 
   - Extends Bazel by creating a symbolic macro which generates multiple targets at once.
 - [Lesson 10: Toolchains](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-10:-Toolchains)
   - Extends Bazel with rules which have system-specific dependencies.
-- Lesson 11: Advanced Toolchains
+- [Lesson 11: Advanced Toolchains](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-11:-Advanced-Toolchains)
   - Extends Bazel with rules that require their own, language-specific source code
 
 ## Disclaimers
