@@ -2,6 +2,7 @@
 Example usage of our custom clojure toolchain.
 """
 
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("//:tags.bzl", "clojure_tag")
 load("//toolchains/clojure:clojure_binary.bzl", "clojure_binary")
 load("//toolchains/clojure:clojure_library.bzl", "clojure_library")
@@ -49,4 +50,15 @@ clojure_test(
     size = "small",
     srcs = ["example_test.clj"],
     tags = [clojure_tag],
+)
+
+bzl_library(
+    name = "clojure_rules_source",
+    srcs = [
+        "clojure_binary.bzl",
+        "clojure_library.bzl",
+        "clojure_test.bzl",
+        "clojure_toolchain.bzl",
+    ],
+    visibility = ["//visibility:public"],
 )

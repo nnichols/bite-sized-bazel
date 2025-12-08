@@ -2,6 +2,7 @@
 Example usage of our custom macros.
 """
 
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load(":graphviz.bzl", "graphviz")
 
 exports_files(
@@ -45,4 +46,10 @@ filegroup(
         ":basic_build_unfactored_filegroup",
         ":filegroup_deps_filegroup",
     ],
+)
+
+bzl_library(
+    name = "macros_source",
+    srcs = ["graphviz.bzl"],
+    visibility = ["//visibility:public"],
 )

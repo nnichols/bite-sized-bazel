@@ -2,6 +2,8 @@
 Example usage of our custom rules.
 """
 
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+load("@stardoc//stardoc:stardoc.bzl", "stardoc")
 load(":hello.bzl", "hello")
 load(":hello_temp.bzl", "hello_temp")
 load(":noop.bzl", "noop_binary")
@@ -9,6 +11,12 @@ load(":print.bzl", "print_binary")
 load(":product.bzl", "product")
 
 noop_binary(name = "noop")
+
+stardoc(
+    name = "noop_binary_docs",
+    out = "noop_binary_docs.md",
+    input = "noop.bzl",
+)
 
 print_binary(
     name = "print",
@@ -89,4 +97,18 @@ product(
 product(
     name = "one",
     number = 1,
+)
+
+bzl_library(
+    name = "rules_source",
+    srcs = [
+        "greeter.bzl",
+        "hello.bzl",
+        "hello_temp.bzl",
+        "json_greeter.bzl",
+        "noop.bzl",
+        "print.bzl",
+        "product.bzl",
+    ],
+    visibility = ["//visibility:public"],
 )

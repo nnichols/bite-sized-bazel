@@ -12,6 +12,7 @@ bb_toolchain = rule(
     implementation = _bb_toolchain,
     attrs = {
         "bb": attr.label(
+            doc = "The babashka binary which will be used to execute programs.",
             executable = True,
             allow_single_file = True,
             cfg = "exec",

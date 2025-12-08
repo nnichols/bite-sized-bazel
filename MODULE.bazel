@@ -154,3 +154,15 @@ register_toolchains(
     "//toolchains/babashka:bb_windows_toolchain",
     "//toolchains/clojure:clojure_jvm_toolchain",
 )
+
+## Rules to generate API documentation for Starlark
+bazel_dep(
+    name = "stardoc",
+    version = "0.8.0",
+)
+
+## Supporting utility rules
+bazel_dep(
+    name = "bazel_skylib",
+    version = "1.8.1",
+)

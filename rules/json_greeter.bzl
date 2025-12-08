@@ -13,14 +13,17 @@ def _json_greeter_impl(ctx):
     return [DefaultInfo(files = depset([out]))]
 
 json_greeter = rule(
+    doc = "Generates a JSON file with a greeting to the designated `username`.",
     implementation = _json_greeter_impl,
     attrs = {
         "username": attr.string(
             mandatory = True,
+            doc = "The name of the user we're greeting",
         ),
         "_template": attr.label(
             allow_single_file = True,
             default = "greeting.json.tpl",
+            doc = "The JSON template file containing the base greeting, and an expandable substitution string.`",
         ),
     },
 )

@@ -2,7 +2,7 @@
 Generates the product of arguments of dependencies.
 """
 
-NumberInfo = provider(doc = "Stores the value for dependents", fields = ["number"])
+NumberInfo = provider(doc = "Stores the numeric value for dependents", fields = ["number"])
 
 def _product_impl(ctx):
     result = ctx.attr.number
@@ -15,11 +15,12 @@ def _product_impl(ctx):
     return [NumberInfo(number = result)]
 
 _product = rule(
+    doc = "Produces the product of all dependencies as a NumberInfo",
     implementation = _product_impl,
     attrs = {
-        "number": attr.int(default = 1),
-        "deps": attr.label_list(),
-        "out": attr.output(),
+        "number": attr.int(default = 1, doc = "The value all dependencies will be multiplied by. Defaults to 1."),
+        "deps": attr.label_list(doc = "A list of NumberInfo provider dependencies to multiply the number by."),
+        "out": attr.output(doc = "The output location the result should be written to."),
     },
 )
 

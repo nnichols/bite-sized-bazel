@@ -14,5 +14,6 @@ def _print_binary_impl(ctx):
     print(dir(ctx))
 
 print_binary = rule(
+    doc = "A debugging rule used to view the evaluation context",
     implementation = _print_binary_impl,
 )

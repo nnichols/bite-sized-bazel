@@ -31,6 +31,8 @@ They progressively build up the repository from an initial, empty commit to the 
   - Extends Bazel with rules which have system-specific dependencies.
 - [Lesson 11: Advanced Toolchains](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-11:-Advanced-Toolchains)
   - Extends Bazel with rules that require their own, language-specific source code
+- Lesson 12: Stardoc
+  - Generating API documentation for custom Starlark rules
 
 ## Disclaimers
 
@@ -80,6 +82,10 @@ Explicitly pinned tools will be documented below:
   - A Clojure library containing clojure.spec.alpha definitions for functionality in the core language
 - [**Cheshire**](https://github.com/dakrone/cheshire): 6.1.0
   - A Clojure library for handling JSON
+- [**Stardoc**](https://github.com/bazelbuild/stardoc): 0.8.0
+  - Rules to generate API documentation for Starlark
+- [**Skylib**](https://github.com/bazelbuild/bazel-skylib): 1.8.1
+  - A collection of Starlark utility functions
 
 ### Unpinned Tools
 

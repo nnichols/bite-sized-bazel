@@ -2,6 +2,7 @@
 Example usage of our custom babashka toolchain.
 """
 
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("//toolchains/babashka:bb_binary.bzl", "bb_binary")
 load("//toolchains/babashka:bb_genrule.bzl", "bb_genrule")
 load("//toolchains/babashka:bb_test.bzl", "bb_test")
@@ -78,4 +79,15 @@ toolchain(
     ],
     toolchain = ":bb_windows",
     toolchain_type = ":babashka_toolchain",
+)
+
+bzl_library(
+    name = "babashka_rules_source",
+    srcs = [
+        "bb_binary.bzl",
+        "bb_genrule.bzl",
+        "bb_test.bzl",
+        "bb_toolchain.bzl",
+    ],
+    visibility = ["//visibility:public"],
 )
