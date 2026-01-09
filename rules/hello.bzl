@@ -12,5 +12,6 @@ def _hello_impl(ctx):
     return [DefaultInfo(files = depset([out]))]
 
 hello = rule(
+    doc = "Writes a static greeting to a file",
     implementation = _hello_impl,
 )

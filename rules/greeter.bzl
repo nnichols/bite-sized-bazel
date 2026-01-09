@@ -12,8 +12,9 @@ def _greeter_impl(ctx):
     return [DefaultInfo(files = depset([out]))]
 
 greeter = rule(
+    doc = "Writes a greeting file to `username`",
     implementation = _greeter_impl,
     attrs = {
-        "username": attr.string(),
+        "username": attr.string(doc = "The name of the user we're greeting"),
     },
 )

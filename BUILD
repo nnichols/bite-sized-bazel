@@ -28,3 +28,9 @@ alias(
     actual = "//toolchains/clojure:clojure_toolchain",
     visibility = ["//visibility:public"],
 )
+
+alias(
+    name = "bazel_documentation",
+    actual = "//doc_hub:concated_docs",
+    visibility = ["//visibility:public"],
+)

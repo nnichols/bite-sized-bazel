@@ -10,5 +10,6 @@ def _hello_temp_impl(ctx):
     )
 
 hello_temp = rule(
+    doc = "Writes a static greeting to a temp file",
     implementation = _hello_temp_impl,
 )

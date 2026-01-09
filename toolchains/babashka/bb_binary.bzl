@@ -29,10 +29,11 @@ bb_binary = rule(
     executable = True,
     attrs = {
         "src": attr.label(
+            doc = "The `.clj` file containing the source code of the script to execute.",
             allow_single_file = [".clj"],
             mandatory = True,
         ),
-        "arguments": attr.string_list(),
+        "arguments": attr.string_list(doc = "A list of string arguments which will be provided in-order to the script."),
     },
     toolchains = ["//:babashka_toolchain"],
 )

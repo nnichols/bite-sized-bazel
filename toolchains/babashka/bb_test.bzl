@@ -31,8 +31,9 @@ bb_test = rule(
         "src": attr.label(
             allow_single_file = [".clj"],
             mandatory = True,
+            doc = "The `.clj` file containing the source code of the script to execute.",
         ),
-        "arguments": attr.string_list(),
+        "arguments": attr.string_list(doc = "A list of string arguments which will be provided in-order to the script."),
     },
     toolchains = ["//:babashka_toolchain"],
 )
