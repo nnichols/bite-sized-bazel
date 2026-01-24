@@ -30,9 +30,11 @@ They progressively build up the repository from an initial, empty commit to the 
 - [Lesson 10: Toolchains](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-10:-Toolchains)
   - Extends Bazel with rules which have system-specific dependencies.
 - [Lesson 11: Advanced Toolchains](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-11:-Advanced-Toolchains)
-  - Extends Bazel with rules that require their own, language-specific source code
+  - Extends Bazel with rules that require their own, language-specific source code.
 - [Lesson 12: Stardoc](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-12:-Stardoc)
-  - Generating API documentation for custom Starlark rules
+  - Generating API documentation for custom Starlark rules.
+- Lesson 13: Aspects
+  - Explores additional routes for dependency metadata to flow through the graph.
 
 ## Disclaimers
 

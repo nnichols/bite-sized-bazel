@@ -2,7 +2,7 @@
 Generates the product of arguments of dependencies.
 """
 
-NumberInfo = provider(doc = "Stores the numeric value for dependents", fields = ["number"])
+load("//providers:number-info.bzl", "NumberInfo")
 
 def _product_impl(ctx):
     result = ctx.attr.number

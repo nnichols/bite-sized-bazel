@@ -56,14 +56,38 @@ stardoc(
     deps = ["//macros:macros_source"],
 )
 
+stardoc(
+    name = "providers_docs",
+    out = "providers_docs.md",
+    input = "providers.bzl",
+    symbol_names = [
+        "FactorInfo",
+        "NumberInfo",
+    ],
+    deps = ["//providers:providers_source"],
+)
+
+stardoc(
+    name = "aspects_docs",
+    out = "aspects_docs.md",
+    input = "aspects.bzl",
+    symbol_names = [
+        "print_factors",
+        "factors",
+    ],
+    deps = ["//aspects:aspects_source"],
+)
+
 filegroup(
     name = "all_docs",
     srcs = [
-        ":rules_docs",
+        ":aspects_docs",
         ":babashka_toolchain_docs",
         ":clojure_toolchain_docs",
         ":macros_docs",
-    ]
+        ":providers_docs",
+        ":rules_docs",
+    ],
 )
 
 genrule(

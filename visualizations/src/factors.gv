@@ -1,0 +1,18 @@
+digraph mygraph {
+  node [shape=box];
+  "//rules:one_hundred_twenty"
+  "//rules:one_hundred_twenty" -> "//rules:five"
+  "//rules:one_hundred_twenty" -> "//rules:one"
+  "//rules:one_hundred_twenty" -> "//rules:twenty_four"
+  "//rules:twenty_four"
+  "//rules:twenty_four" -> "//rules:one"
+  "//rules:twenty_four" -> "//rules:six"
+  "//rules:six"
+  "//rules:six" -> "//rules:one"
+  "//rules:six" -> "//rules:two\n//rules:three"
+  "//rules:two\n//rules:three"
+  "//rules:two\n//rules:three" -> "//rules:one"
+  "//rules:five"
+  "//rules:five" -> "//rules:one"
+  "//rules:one"
+}
