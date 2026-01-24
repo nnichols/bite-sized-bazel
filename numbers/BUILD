@@ -98,6 +98,7 @@ print_factors(
     ],
 )
 
+# NOTE: buildifier automatically sorts `deps` by their label
 factors_file(
     name = "factors",
     deps = [

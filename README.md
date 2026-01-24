@@ -33,7 +33,7 @@ They progressively build up the repository from an initial, empty commit to the 
   - Extends Bazel with rules that require their own, language-specific source code.
 - [Lesson 12: Stardoc](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-12:-Stardoc)
   - Generating API documentation for custom Starlark rules.
-- Lesson 13: Aspects
+- [Lesson 13: Aspects](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-13:-Aspects)
   - Explores additional routes for dependency metadata to flow through the graph.
 
 ## Disclaimers
