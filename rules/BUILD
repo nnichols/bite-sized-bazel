@@ -71,10 +71,18 @@ product(
 )
 
 product(
+    name = "four",
+    number = 2,
+    deps = [
+        ":two",
+    ],
+)
+
+product(
     name = "twenty_four",
-    number = 4,
     deps = [
         ":one",
+        ":four",
         ":six",
     ],
 )
@@ -102,13 +110,19 @@ product(
 bzl_library(
     name = "rules_source",
     srcs = [
+        "factors_file.bzl",
         "greeter.bzl",
         "hello.bzl",
         "hello_temp.bzl",
         "json_greeter.bzl",
         "noop.bzl",
         "print.bzl",
+        "print_factors.bzl",
         "product.bzl",
     ],
     visibility = ["//visibility:public"],
+    deps = [
+        "//aspects:aspects_source",
+        "//providers:providers_source",
+    ],
 )
