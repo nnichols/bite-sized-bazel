@@ -36,7 +36,7 @@ They progressively build this repository from an initial empty commit to the cur
 - [Lesson 13: Aspects](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-13:-Aspects)
   - Explores additional routes for dependency metadata to flow through the graph.
 - Lesson 14: Modifying The Source Tree
-  - Develops executable targets that update the repository's source code
+  - Develops executable targets that update the repository's source code.
 
 ## Disclaimers
 
