@@ -45,6 +45,14 @@ clojure_binary(
     deps = [":pwd_source"],
 )
 
+clojure_binary(
+    name = "pwd_workspace",
+    execute_in_workspace = True,
+    main = "toolchains.clojure.pwd",
+    tags = [clojure_tag],
+    deps = [":pwd_source"],
+)
+
 clojure_test(
     name = "example-test",
     size = "small",

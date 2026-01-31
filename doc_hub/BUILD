@@ -3,6 +3,8 @@ A central documentation hub for the `.bzl` files we've authored
 """
 
 load("@stardoc//stardoc:stardoc.bzl", "stardoc")
+load("//toolchains/clojure:clojure_binary.bzl", "clojure_binary")
+load("//toolchains/clojure:clojure_library.bzl", "clojure_library")
 
 stardoc(
     name = "rules_docs",
@@ -98,4 +100,43 @@ genrule(
     outs = ["build_api.md"],
     cmd = "cat $(locations :all_docs) > $@",
     visibility = ["//visibility:public"],
+)
+
+clojure_library(
+    name = "copy",
+    srcs = [
+        "copy.clj",
+    ],
+)
+
+clojure_binary(
+    name = "copy_api_documentation",
+    arguments = [
+        "--output",
+        "./generated/api-documentation.md",
+    ],
+    data = [
+        ":concated_docs",
+    ],
+    execute_in_workspace = True,
+    main = "doc-hub.copy",
+    deps = [
+        ":copy",
+    ],
+)
+
+clojure_binary(
+    name = "copy_api_documentation_local",
+    arguments = [
+        "--output",
+        "./generated/api-documentation.md",
+    ],
+    data = [
+        ":concated_docs",
+    ],
+    execute_in_workspace = False,
+    main = "doc-hub.copy",
+    deps = [
+        ":copy",
+    ],
 )
