@@ -94,7 +94,7 @@ print_factors(
     name = "eight_factors",
     deps = [
         ":eight",
-        ":six"
+        ":six",
     ],
 )
 

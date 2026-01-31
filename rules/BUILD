@@ -81,8 +81,8 @@ product(
 product(
     name = "twenty_four",
     deps = [
-        ":one",
         ":four",
+        ":one",
         ":six",
     ],
 )
