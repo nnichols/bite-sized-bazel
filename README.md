@@ -7,7 +7,7 @@ We'll cover the basics of Bazel, how to set up your workspace, how to define and
 ## Lessons
 
 The lessons can be found in the [wiki of this repository.](https://github.com/nnichols/bite-sized-bazel/wiki)
-They progressively build up the repository from an initial, empty commit to the current state.
+They progressively build this repository from an initial, empty commit to the current state.
 
 - [Lesson 1: Installing Bazel](https://github.com/nnichols/bite-sized-bazel/wiki/Lesson-1:-Installing-Bazel)
   - Installs Bazel on your machine and sets up the repository as a Bazel project.
