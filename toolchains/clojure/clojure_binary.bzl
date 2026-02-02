@@ -28,6 +28,7 @@ def _clojure_binary_impl(ctx):
         set -ex
         BAZEL_ROOT=$(pwd)
 
+        # The Python-casing of booleans is shared by Starlark
         if [[ {execute_in_workspace} == "True" ]]; then
           cd "$BUILD_WORKSPACE_DIRECTORY"
         fi

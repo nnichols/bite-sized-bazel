@@ -4,7 +4,7 @@ The configuration controlling that behavior lives in `.bazelignore`
 """
 
 filegroup(
-    name = "bazel-ignore-test",
+    name = "bazel_ignore_test",
     srcs = [
         "api-documentation.md",
     ],
