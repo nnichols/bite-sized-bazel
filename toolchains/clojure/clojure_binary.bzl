@@ -27,10 +27,17 @@ def _clojure_binary_impl(ctx):
         content = """
         set -ex
         BAZEL_ROOT=$(pwd)
+
+        # The Python-casing of booleans is shared by Starlark
+        if [[ {execute_in_workspace} == "True" ]]; then
+          cd "$BUILD_WORKSPACE_DIRECTORY"
+        fi
+
         FULL_CLASSPATH_FILE="$BAZEL_ROOT/full_classpath"
         sed -E "s=(^|:)=\\1$BAZEL_ROOT/=g" $BAZEL_ROOT/{classpath} > $FULL_CLASSPATH_FILE
 
-        {java} \
+        # We might have navigated outside of the execRoot, so we need to supply an absolute path for the Java executable
+        $BAZEL_ROOT/{java} \
           -XX:-OmitStackTraceInFastThrow \
           -classpath @$FULL_CLASSPATH_FILE \
           clojure.main \
@@ -43,6 +50,7 @@ def _clojure_binary_impl(ctx):
             main = ctx.attr.main,
             data = "--data {}".format(":".join([f.short_path for f in ctx.files.data])) if ctx.files.data else "",
             arguments = " ".join(ctx.attr.arguments),
+            execute_in_workspace = ctx.attr.execute_in_workspace,
         ),
     )
 
@@ -70,8 +78,18 @@ clojure_binary = rule(
             providers = [JavaInfo],
             doc = "Libraries to link as dependencies of this binary.",
         ),
-        "arguments": attr.string_list(default = []),
-        "data": attr.label_list(allow_files = True),
+        "arguments": attr.string_list(
+            default = [],
+            doc = "A list of string arguments to pass to our script.",
+        ),
+        "data": attr.label_list(
+            allow_files = True,
+            doc = "Static data dependencies required at runtime",
+        ),
+        "execute_in_workspace": attr.bool(
+            default = False,
+            doc = "A boolean that determines if the script should execute in the workspace or the execRoot.",
+        ),
     },
     toolchains = ["//:clojure_toolchain"],
 )
